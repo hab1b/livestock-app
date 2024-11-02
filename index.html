@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hacienda Toledo</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <!-- Include D3.js for Genetic Tree -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Hacienda Toledo</h1>
+    <div class="header-controls">
+      <input type="text" id="searchBar" placeholder="Search by Nombre or ID">
+      <label class="switch">
+        <input type="checkbox" id="viewToggle">
+        <span class="slider round"></span>
+      </label>
+      <span id="toggleLabel">Card View</span>
+    </div>
+  </header>
+  <main>
+    <section id="profilesContainer">
+      <!-- Cow profiles will be dynamically injected here -->
+    </section>
+    <section id="treeContainer" style="display: none;">
+      <!-- Genetic tree will be rendered here -->
+    </section>
+  </main>
+  
+  <!-- Modal for Detailed Profile -->
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modalContent">
+        <!-- Detailed profile content will be injected here -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- Include PapaParse for CSV parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
